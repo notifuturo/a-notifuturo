@@ -1,4 +1,30 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = "https://notifuturo.com/"
+languageCode = "es"
+title = "NotiFuturo"
 theme = "PaperMod"
+defaultContentLanguage = "es"
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  defaultTheme = "light"
+
+  [params.homeInfoParams]
+    Title = "Noticias desde el Futuro"
+    Content = "Un portal informativo con lo más relevante de la inteligencia artificial, tecnología y sociedad."
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[permalinks]
+  posts = "/posts/:slug/"
+
